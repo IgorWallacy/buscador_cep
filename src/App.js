@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+
+import { InputText } from "primereact/inputtext";
+import { Card } from 'primereact/card';
+
 
 function App() {
+  const [value, setValue] = useState();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <Card>
+    <div className="container">
+      <div className="title">
+        <h1>Buscador de CEP</h1>
+      </div>
+      <div className="containerInput">
+      <span className="p-input-icon-left">
+      <i className="pi pi-search" />
+        <InputText placeholder="Digite um cep ..." className="p-inputtext p-inputtext-lg block" value={value} onChange={(e) => setValue(e.target.value)} />
+      </span>
+      </div>
     </div>
+    </Card>
   );
 }
 
