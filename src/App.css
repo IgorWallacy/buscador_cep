@@ -39,6 +39,23 @@
   outline: none;
 }
 
+.resultado {
+  background: #6458;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 15px;
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  margin: 20px 0px;
+  box-shadow: 1px 3px 8px #000;
+}
+
+.resultado  h2 {
+  margin : 5px;
+}
+
 @keyframes flipTitle {
 
   from {
