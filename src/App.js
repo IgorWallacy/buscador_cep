@@ -21,6 +21,8 @@ function App() {
        await api
         .get(`${value}/json`)
         .then((data) => setResultado(data.data));
+        toast.current.show({severity:'success', summary: 'Success Message', detail:`Dados encontrados`, life: 3000});
+
     } catch (error) {
       toast.current.show({severity:'error', summary: 'Error Message', detail:` Erro ao retornar um cep!   ${error}`, life: 3000});
     }
